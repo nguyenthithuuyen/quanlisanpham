@@ -102,6 +102,16 @@
         document.getElementById('price').value = '';
         document.getElementById('quantity').value = '';
     }
+    function editItem(index) {
+        let newName=prompt('Mời bạn nhập tên mới',products[index][0]);
+        let newPrice=parseInt(prompt('Mời bạn nhập giá mới',products[index][1]));
+        let newQuatity =parseInt(prompt('Mời bạn số lượng',products[index][2]));
+        products[index][0]= newName;
+        products[index][1]= newPrice;
+        products[index][2]= newQuatity;
+        showListProduct();
+
+    }
     showListProduct();
 
 </script>
